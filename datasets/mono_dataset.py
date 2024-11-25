@@ -30,6 +30,7 @@ class MonoDataset(data.Dataset):
         is_train
         img_ext
     """
+   
     def __init__(self,
                  data_path,
                  filenames,
@@ -46,7 +47,7 @@ class MonoDataset(data.Dataset):
         self.height = height
         self.width = width
         self.num_scales = num_scales
-        self.interp = Image.ANTIALIAS
+        self.interp = Image.LANCZOS
 
         self.frame_idxs = frame_idxs
 
